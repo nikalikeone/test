@@ -85,4 +85,48 @@
     display: none;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    overflow-y: auto;
 
+}
+
+.modal_main {
+    position: relative;
+    max-width: 600px;
+    background-color: rgb(188, 143, 143);
+    margin: auto;
+    color: black;
+    border-radius: 15px;
+    padding: 50px;
+    cursor: default;
+
+}
+
+.modal_close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    top: 11px;
+    right: 18px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    transition: outline-color .15s ease-in-out;
+    border-radius: 3px;
+    padding: 0;
+    text-align: center;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.modal_close:focus-visible {
+    outline-color: brown;
+}

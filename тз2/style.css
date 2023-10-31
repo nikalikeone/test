@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  align-self: center;
+  background: linear-gradient(blue, pink);
+  height: 100vh;
+}
+.container {
+    margin: auto;
+}
+
+.px-4 {
+  margin: auto;
+}
