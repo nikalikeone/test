@@ -1,4 +1,5 @@
-const button1 = document.querySelector('.btn-warning');
+(function() {
+    const button1 = document.querySelector('.btn-warning');
 
 const title = document.querySelector('.header');
 
@@ -62,3 +63,5 @@ const closeModal = event => {
 
 modal.addEventListener('click', closeModal);
 
+
+})();
