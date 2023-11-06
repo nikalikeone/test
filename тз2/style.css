@@ -6,9 +6,17 @@
 }
 
 .container {
-    margin: auto;
+  margin: auto;
 }
 
 .px-4 {
   margin: auto;
+}
+
+.new_styles {
+  width: 100%; 
+  min-height: 100%; 
+  color: white ; 
+  position: relative; 
+  z-index: 4;
 }

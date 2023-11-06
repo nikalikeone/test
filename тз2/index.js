@@ -1,21 +1,39 @@
 (function () {
     let formArray = [];
-    let option = document.querySelector('option');
+    let select = document.getElementById('select');
     let formName = document.getElementById('name');
     let email = document.getElementById('e-mail');
-    // let button = document.querySelector('btn');
     let form = document.getElementById('form');
-    let obj = {
-        number : option.value,
-        name : formName.value,
-        email : email.value
-    };
+    let formData = {};
+    let outputBlock = document.getElementById('json_result');
+
+    select.addEventListener('change', function (e) {
+        formData.number = select.value;
+    });
+
+    formName.addEventListener('change', function (e) {
+        formData.name = formName.value
+    });
+
+    email.addEventListener('change', function (e) {
+        formData.email = email.value;
+    });
+
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        formArray.push(obj);
+        let output = document.createElement('p');
+        
+        // outputBlock.append(output);
+        formArray.push(formData); 
+        output.textContent = JSON.stringify(formData);
         
         
-        console.log(formArray);    
-        
+        // console.log(JSON.stringify( formData));
+        // alert(JSON.stringify(formData, ['number', 'name', 'email'])); 
+        outputBlock.appendChild(output);
+
+        return false;
     })
+
 })();
